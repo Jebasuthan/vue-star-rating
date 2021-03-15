@@ -1,4 +1,4 @@
-#VueJS Star Rating
+# VueJS Star Rating
 Star Rating custom component using Pure VueJS application without any external package.
 
 ## Project setup
