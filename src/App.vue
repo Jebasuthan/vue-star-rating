@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Rating :star="2" :starSize="starSize" :hasResults="true" :hasDescription="true" :ratingDescription="desc" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Rating from './components/Rating'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Rating
+  },
+  data() {
+    return {
+      desc: [
+        {
+          text: 'Poor',
+          class: 'star-poor'
+        },
+        {
+          text: 'Below Average',
+          class: 'star-belowAverage'
+        },
+        {
+          text: 'Average',
+          class: 'star-average'
+        },
+        {
+          text: 'Good',
+          class: 'star-good'
+        },
+        {
+          text: 'Excellent',
+          class: 'star-excellent'
+        }
+      ],
+      starSize: 'lg' //xs/6x
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
