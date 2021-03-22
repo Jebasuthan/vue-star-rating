@@ -150,12 +150,14 @@ npm run serve
 # Demo
 ![Vue_Star](https://user-images.githubusercontent.com/3702438/111186905-7b6bec80-85d9-11eb-9b53-a11aaf422c5b.gif)
 
+# Live DEMO
+[DEMO](https://codesandbox.io/s/reverent-heyrovsky-juycp)
+
 ### Compiles and minifies for production
 ```
 npm run build
 ```
-# Live DEMO
-[Live DEMO](https://codesandbox.io/s/reverent-heyrovsky-juycp)
+
 ### Run your tests
 ```
 npm run test
