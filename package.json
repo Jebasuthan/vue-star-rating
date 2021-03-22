@@ -1,6 +1,6 @@
 {
   "name": "awesome-vue-star-rating",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple, highly customisable star rating component for Vue 2.x without any external libraries",
   "main": "dist/AwesomeVueStarRating.common.js",
   "scripts": {
@@ -25,6 +25,9 @@
   "author": "Jebasuthan <itjebasuthan@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -33,9 +36,6 @@
     "i": "^0.3.6",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.0",
     "@vue/cli-plugin-eslint": "^3.12.0",
     "@vue/cli-service": "^3.12.0",
@@ -66,5 +66,12 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jebasuthan/vue-star-rating"
+  }
 }
