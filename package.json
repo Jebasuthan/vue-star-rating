@@ -1,6 +1,6 @@
 {
   "name": "awesome-vue-star-rating",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple, highly customisable star rating component for Vue 2.x without any external libraries",
   "main": "dist/AwesomeVueStarRating.common.js",
   "scripts": {
@@ -67,9 +67,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Jebasuthan/vue-star-rating"
