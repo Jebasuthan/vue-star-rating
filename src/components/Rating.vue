@@ -1,20 +1,29 @@
 <template>
   <div class="rating">
     <ul class="list">
-      <li :key="star" v-for="star in maxStars" @mouseover="hoverStar(star)"
+      <li :key="star" v-for="star in maxstars" @mouseover="hoverStar(star)"
     @mouseleave="mouseLeftStar" :class="{ 'active': star <= stars }" @click="rate(star)" class="star">
         <font-awesome-icon :size="starSize" :icon="[star <= stars ? 'fas' : 'far', 'star']"/>
       </li>
-      <span v-if="hasDescription" :class="star_desc.class">{{star_desc.text}}</span>
+      <span v-if="hasdescription" :class="star_desc.class">{{star_desc.text}}</span>
     </ul>
-    <span v-if="hasResults">{{ stars }} of {{ maxStars }}</span>
+    <span v-if="hasresults">{{ stars }} of {{ maxstars }}</span>
   </div>
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+library.add(fas)
+library.add(far)
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
   name: 'vue_star_rating',
+  components: {
+    FontAwesomeIcon
+  },
   data() {
     return {
       stars: this.star,
@@ -25,19 +34,19 @@ export default {
     star: {
       type: Number
     },
-    maxStars: {
+    maxstars: {
       type: Number,
       default: 5
     },
-    hasResults: {
+    hasresults: {
       type: Boolean,
       default: true
     },
-    hasDescription: {
+    hasdescription: {
       type: Boolean,
       default: true
     },
-    ratingDescription: {
+    ratingdescription: {
       type: Array,
       default: () => {
         return [{
@@ -63,25 +72,25 @@ export default {
       }
       //default: ["Poor", "Below Average", "Average", "Good", "Excellent"]
     },
-    starSize: {
+    starsize: {
       type: String,
       default: 'lg'
     }
   },
   methods: {
     rate(star) {
-      if (star <= this.maxStars && star >= 0) {
+      if (star <= this.maxstars && star >= 0) {
         this.stars = this.stars === star ? star - 1 : star
       }
     },
     hoverStar(star) {
-      if (star <= this.maxStars && star >= 0) {
-        this.star_desc = this.ratingDescription[star - 1]
+      if (star <= this.maxstars && star >= 0) {
+        this.star_desc = this.ratingdescription[star - 1]
       }
     },
     mouseLeftStar() {
       if(this.stars) {
-        this.star_desc = this.ratingDescription[this.stars - 1]
+        this.star_desc = this.ratingdescription[this.stars - 1]
         return this.star_desc
       } else {
         this.star_desc = ''
@@ -89,7 +98,7 @@ export default {
     },
     getRatingDesc(star) {
       if(star) {
-        this.star_desc = this.ratingDescription[star - 1]
+        this.star_desc = this.ratingdescription[star - 1]
       }
       return this.star_desc
     }
