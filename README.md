@@ -1,9 +1,9 @@
 # VueJS Star Rating
-Star Rating custom component using Pure VueJS application without any external package.
+Awesome Vue Star Rating using Pure VueJS application without any external package.
 
-## Project setup
+## Installing
 ```
-npm install
+npm install --save awesome-vue-star-rating
 ```
 
 ## Options
@@ -25,25 +25,25 @@ npm install
 <td>Default value of Star. Default value is <code>2</code></td>
 </tr>
 <tr>
-<td>maxStars</td>
+<td>maxstars</td>
 <td>Number</td>
 <td>Required.</td>
 <td>Default value is <code>5</code>.</td>
 </tr>
 <tr>
-<td>hasResults</td>
+<td>hasresults</td>
 <td>Boolean</td>
 <td>Optional.</td>
 <td>Displaying the result values. Default value is <code>true</code>.</td>
 </tr>
 <tr>
-<td>hasDescription</td>
+<td>hasdescription</td>
 <td>Boolean</td>
 <td>Optional.</td>
 <td>Default value is <code>true</code>.</td>
 </tr>
 <tr>
-<td>ratingDescription</td>
+<td>ratingdescription</td>
 <td>Array</td>
 <td>Required.</td>
 <td>Displaying the rating values. Ex. <code>[{
@@ -68,7 +68,7 @@ npm install
         }]</code></td>
 </tr>
 <tr>
-<td>starSize</td>
+<td>starsize</td>
 <td>String</td>
 <td>Optional.</td>
 <td>Displaying the size of the stars. Default value is <code>lg</code>. We have <code>lg | xs | 6x</code> other optional values too.</td>
@@ -79,30 +79,26 @@ npm install
 
 # Usage
 
-Step 1: import and use the custom Rating component.
+Step 1: import AwesomeVueStarRating in our component
 
 ```
-import Rating from './components/Rating'
-```
-Step 2: Import the Rating component inside the App component
-```
-<script>
-
-import Rating from './components/Rating'
+import AwesomeVueStarRating from 'awesome-vue-star-rating'
 
 export default {
   name: 'app',
   components: {
-    Rating
+    AwesomeVueStarRating
   }
 }
 </script>
 ```
-Step 3: Load defalt values to the component
+Step 2: Load default values to the component
+
 ```
 data() {
     return {
-      desc: [
+      star: 5, // default star
+      ratingdescription: [
         {
           text: 'Poor',
           class: 'star-poor'
@@ -124,20 +120,21 @@ data() {
           class: 'star-excellent'
         }
       ],
-      starSize: 'lg' //xs/6x
+      hasresults: true,
+      hasdescription: true,
+      starsize: 'lg' //xs/6x
     }
 }
 ```
 
-Step 4: Place the Rate component inside the template
+Step 3: Place the Rate component inside the template
 ```
 <template>
   <div id="app">
-    <Rating :star="2" :starSize="starSize" :hasResults="true" :hasDescription="true" :ratingDescription="desc" />
+    <AwesomeVueStarRating :star="this.star" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription" />
   </div>
 </template>
 ```
-
 
 
 
