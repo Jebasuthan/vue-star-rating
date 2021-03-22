@@ -154,7 +154,8 @@ npm run serve
 ```
 npm run build
 ```
-
+# Live DEMO
+[Live DEMO](https://codesandbox.io/s/reverent-heyrovsky-juycp)
 ### Run your tests
 ```
 npm run test
