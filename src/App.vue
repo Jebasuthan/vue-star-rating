@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Rating :star="this.star" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription" />
+    <Rating :star="this.star" :disabled="disabled" :maxstars="this.maxstars" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription" />
   </div>
 </template>
 
@@ -55,6 +55,14 @@ export default {
     starsize: {
       type: String,
       default: "lg" //xs/6x
+    },
+    maxstars: {
+      type: Number,
+      default: 5
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 };
