@@ -151,7 +151,27 @@ Step 3: Place the Rate component inside the template
 </template>
 ```
 
-
+Step 4: Customize the star color styles like below
+```
+<style lang="scss">
+ .star {
+  color: red;
+ }
+ .star.active {
+  color: red;
+ }
+ .list, .list.disabled {
+  &:hover {
+    .star {
+      color: red !important;
+    }
+    .star.active {
+      color: red;
+    }
+  }
+}
+</style>
+```
 
 ### Compiles and hot-reloads for development
 ```
