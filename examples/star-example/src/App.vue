@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AwesomeVueStarRating :star="this.star" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription"/>
+    <AwesomeVueStarRating :star="this.star" :disabled="this.disabled" :maxstars="this.maxstars" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription"/>
   </div>
 </template>
 
@@ -39,7 +39,9 @@ export default {
       ],
       hasresults: true,
       hasdescription: true,
-      starsize: 'lg' //xs/6x
+      starsize: 'lg', //[xs,lg,1x,2x,3x,4x,5x,6x,7x,8x,9x,10x],
+      maxstars: 5,
+      disabled: false
     }
   }
 }
