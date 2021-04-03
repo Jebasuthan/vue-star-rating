@@ -1,10 +1,18 @@
-# VueJS Star Rating
+# Awesome Vue Star Rating
 Awesome Vue Star Rating using Pure VueJS application without any external package.
 
 ## Installing
 ```
 npm install --save awesome-vue-star-rating
 ```
+## Features
+1. Font icon stars — scale without loss of quality
+2. Customisable ratings and rating descriptions
+3. Customisable results of selected value and description
+4. Customisable number of stars
+5. Create read-only stars
+6. Customisable Colors
+
 
 ## Options
  
@@ -71,9 +79,14 @@ npm install --save awesome-vue-star-rating
 <td>starsize</td>
 <td>String</td>
 <td>Optional.</td>
-<td>Displaying the size of the stars. Default value is <code>lg</code>. We have <code>lg | xs | 6x</code> other optional values too.</td>
+<td>Displaying the size of the stars. Default value is <code>lg</code>. We have list of <code>[xs,lg,1x,2x,3x,4x,5x,6x,7x,8x,9x,10x]</code> other optional values too.</td>
 </tr>
 <tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>Optional.</td>
+<td>Enable or disable the star selection. Default value is <code>false</code>.</td>
+</tr>
 </tbody>
 </table>
 
@@ -122,7 +135,9 @@ data() {
       ],
       hasresults: true,
       hasdescription: true,
-      starsize: 'lg' //xs/6x
+      starsize: 'lg', //[xs,lg,1x,2x,3x,4x,5x,6x,7x,8x,9x,10x],
+      maxstars: 5,
+      disabled: false
     }
 }
 ```
@@ -131,7 +146,7 @@ Step 3: Place the Rate component inside the template
 ```
 <template>
   <div id="app">
-    <AwesomeVueStarRating :star="this.star" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription" />
+    <AwesomeVueStarRating :star="this.star" :disabled="this.disabled" :maxstars="this.maxstars" :starsize="this.starsize" :hasresults="this.hasresults" :hasdescription="this.hasdescription" :ratingdescription="this.ratingdescription" />
   </div>
 </template>
 ```
@@ -145,10 +160,12 @@ npm run serve
 
 # Screen Shot
 <img width="343" alt="Screenshot 2021-03-15 at 9 56 04 PM" src="https://user-images.githubusercontent.com/3702438/111186769-5aa39700-85d9-11eb-9708-e68fda77524d.png">
+<img width="399" alt="Screenshot 2021-04-03 at 3 48 33 PM" src="https://user-images.githubusercontent.com/3702438/113475579-33334200-9494-11eb-84d5-34c7829a0e72.png">
 
 
 # Demo
 ![Vue_Star](https://user-images.githubusercontent.com/3702438/111186905-7b6bec80-85d9-11eb-9b53-a11aaf422c5b.gif)
+![Vue Star Color Modified](https://user-images.githubusercontent.com/3702438/113475518-d9cb1300-9493-11eb-8af9-e30cc92b5061.gif)
 
 # Live DEMO
 [DEMO](https://codesandbox.io/s/reverent-heyrovsky-juycp)
