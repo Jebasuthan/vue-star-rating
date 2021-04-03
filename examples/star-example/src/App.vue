@@ -46,3 +46,22 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+/** Customise Star color **/
+.star {
+  color: red;
+}
+.star.active {
+  color: red;
+}
+.list, .list.disabled {
+  &:hover {
+    .star {
+      color: red !important;
+    }
+    .star.active {
+      color: red;
+    }
+  }
+}
+</style>
