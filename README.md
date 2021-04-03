@@ -1,4 +1,4 @@
-# Vue Star Rating
+# Awesome Vue Star Rating
 Awesome Vue Star Rating using Pure VueJS application without any external package.
 
 ## Installing
