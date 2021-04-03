@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      star: 5,
+      star: 2,
       ratingdescription: [
         {
           text: 'Poor',
