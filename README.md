@@ -184,8 +184,7 @@ npm run serve
 
 
 # Demo
-![Vue_Star](https://user-images.githubusercontent.com/3702438/111186905-7b6bec80-85d9-11eb-9b53-a11aaf422c5b.gif)
-![Vue Star Color Modified](https://user-images.githubusercontent.com/3702438/113475518-d9cb1300-9493-11eb-8af9-e30cc92b5061.gif)
+![Vue_Star](https://user-images.githubusercontent.com/3702438/113581801-3cafdc00-9645-11eb-9b21-0e89db833c70.gif)
 
 ## <g-emoji class="g-emoji" alias="tada" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png">🎉 </g-emoji> [Demo Link](https://codesandbox.io/s/reverent-heyrovsky-juycp)  <g-emoji class="g-emoji" alias="tada" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png">🎉</g-emoji>
 
